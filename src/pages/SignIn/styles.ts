@@ -1,5 +1,6 @@
 import styled from 'styled-components/native';
 import FeatherIcon from 'react-native-vector-icons/Feather';
+import { getBottomSpace } from 'react-native-iphone-x-helper';
 
 export const Container = styled.SafeAreaView`
   flex: 1;
@@ -34,5 +35,37 @@ export const Title = styled.Text`
   font-size: 20px;
   color: #ffffff;
   font-family: 'Poppins-Medium';
-  margin: 60px 0 24px;
+  margin: 30px 0 24px;
+`;
+
+export const ForgotPassword = styled.TouchableOpacity`
+  margin-top: 24px;
+`;
+
+export const ForgotPasswordText = styled.Text`
+  color: #ffffff;
+  font-size: 16px;
+  font-family: 'Poppins-Regular';
+`;
+
+export const CreateAccountButton = styled.TouchableOpacity`
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: #232129;
+  border-top-width: 1px;
+  border-color: #fb1528;
+  padding: 16px 0 ${16 + getBottomSpace()}px;
+
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+`;
+
+export const CreateAccountButtonText = styled.Text`
+  color: #fb1528;
+  font-size: 18px;
+  font-family: 'Poppins-Regular';
+  margin-left: 16px;
 `;

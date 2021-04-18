@@ -1,33 +1,69 @@
 import React from 'react';
+import { KeyboardAvoidingView, Platform, ScrollView, View } from 'react-native';
 
 import Input from '../../components/Input';
 import Button from '../../components/Button';
 
-import { Container, Brand, Logo, Name, Icon, Title } from './styles';
+import {
+  Container,
+  Brand,
+  Logo,
+  Name,
+  Icon,
+  Title,
+  ForgotPassword,
+  ForgotPasswordText,
+  CreateAccountButton,
+  CreateAccountButtonText,
+} from './styles';
 
 const SignIn: React.FC = () => {
   return (
-    <Container>
-      <Brand>
-        <Logo>
-          <Name>PsyHeart</Name>
-        </Logo>
-        <Icon name="heart" size={80} color="#fb1528" />
-      </Brand>
-
-      <Title>Faça seu login</Title>
-
-      <Input name="email" icon="mail" placeholder="E-mail" />
-      <Input name="password" icon="lock" placeholder="Senha" />
-
-      <Button
-        onPress={() => {
-          console.log('Oi');
-        }}
+    <>
+      <KeyboardAvoidingView
+        style={{ flex: 1 }}
+        behavior={Platform.OS === 'ios' ? 'padding' : undefined}
+        enabled
       >
-        Entrar
-      </Button>
-    </Container>
+        <ScrollView
+          keyboardShouldPersistTaps="handled"
+          contentContainerStyle={{ flex: 1 }}
+        >
+          <Container>
+            <Brand>
+              <Logo>
+                <Name>PsyHeart</Name>
+              </Logo>
+              <Icon name="heart" size={80} color="#fb1528" />
+            </Brand>
+
+            <View>
+              <Title>Faça seu login</Title>
+            </View>
+
+            <Input name="email" icon="mail" placeholder="E-mail" />
+            <Input name="password" icon="lock" placeholder="Senha" />
+
+            <Button
+              onPress={() => {
+                console.log('Oi');
+              }}
+            >
+              Entrar
+            </Button>
+
+            <ForgotPassword onPress={() => {}}>
+              <ForgotPasswordText>Esqueci a senha</ForgotPasswordText>
+            </ForgotPassword>
+          </Container>
+        </ScrollView>
+      </KeyboardAvoidingView>
+
+      <CreateAccountButton onPress={() => {}}>
+        <Icon name="log-in" size={20} color="#fb1528" />
+        <CreateAccountButtonText>Criar uma conta</CreateAccountButtonText>
+      </CreateAccountButton>
+    </>
   );
 };
 
