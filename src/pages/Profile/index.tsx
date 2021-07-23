@@ -1,4 +1,4 @@
-import React, { useCallback, useRef } from 'react';
+import React, { useCallback, useRef, useState } from 'react';
 import {
   KeyboardAvoidingView,
   Platform,
@@ -12,7 +12,7 @@ import { Form } from '@unform/mobile';
 import { FormHandles } from '@unform/core';
 import * as Yup from 'yup';
 import Icon from 'react-native-vector-icons/Feather';
-import { launchImageLibrary } from 'react-native-image-picker';
+import { launchCamera, launchImageLibrary } from 'react-native-image-picker';
 
 import Input from '../../components/Input';
 import Button from '../../components/Button';
@@ -28,6 +28,10 @@ import {
   UserAvatarButton,
   UserAvatar,
   Title,
+  Modal,
+  ModalView,
+  ChooseActionAvatarButton,
+  ChooseActionAvatarButtonText,
 } from './styles';
 
 interface ProfileFormData {
@@ -39,10 +43,12 @@ interface ProfileFormData {
 }
 
 const Profile: React.FC = () => {
+  const [modalVisible, setModalVisible] = useState(false);
+
   const { user, updateUser } = useAuth();
 
-  const formRef = useRef<FormHandles>(null);
   const navigation = useNavigation();
+  const formRef = useRef<FormHandles>(null);
 
   const emailInputRef = useRef<TextInput>(null);
   const oldPasswordInputRef = useRef<TextInput>(null);
@@ -122,9 +128,87 @@ const Profile: React.FC = () => {
     [navigation, updateUser],
   );
 
-  const handleUpdateAvatar = useCallback(() => {
-    launchImageLibrary({}, response => {});
+  const handleOpenAvatarModal = useCallback(() => {
+    setModalVisible(true);
   }, []);
+
+  const handleTakePhotoFromCamera = useCallback(() => {
+    launchCamera(
+      {
+        mediaType: 'photo',
+      },
+      response => {
+        if (response.didCancel) {
+          return;
+        }
+
+        if (response.errorCode) {
+          Alert.alert('Erro ao atualizar seu avatar.');
+          return;
+        }
+
+        if (response.assets) {
+          const source = {
+            uri: response.assets[0].uri,
+            type: response.assets[0].type,
+          };
+
+          const data = new FormData();
+
+          data.append('avatar', {
+            type: source.type,
+            name: `${user.id}.jpg`,
+            uri: source.uri,
+          });
+
+          api.patch('users/avatar', data).then(apiResponse => {
+            updateUser(apiResponse.data);
+          });
+        }
+
+        setModalVisible(false);
+      },
+    );
+  }, [updateUser, user.id]);
+
+  const handleChooseImageLibrary = useCallback(() => {
+    launchImageLibrary(
+      {
+        mediaType: 'photo',
+      },
+      response => {
+        if (response.didCancel) {
+          return;
+        }
+
+        if (response.errorCode) {
+          Alert.alert('Erro ao atualizar seu avatar.');
+          return;
+        }
+
+        if (response.assets) {
+          const source = {
+            uri: response.assets[0].uri,
+            type: response.assets[0].type,
+          };
+
+          const data = new FormData();
+
+          data.append('avatar', {
+            type: source.type,
+            name: `${user.id}.jpg`,
+            uri: source.uri,
+          });
+
+          api.patch('users/avatar', data).then(apiResponse => {
+            updateUser(apiResponse.data);
+          });
+        }
+
+        setModalVisible(false);
+      },
+    );
+  }, [updateUser, user.id]);
 
   const handleGoBack = useCallback(() => {
     navigation.goBack();
@@ -143,7 +227,7 @@ const Profile: React.FC = () => {
               <Icon name="chevron-left" size={24} color="#999591" />
             </BackButton>
 
-            <UserAvatarButton onPress={() => {}}>
+            <UserAvatarButton onPress={handleOpenAvatarModal}>
               <UserAvatar source={{ uri: user.avatar_url }} />
             </UserAvatarButton>
 
@@ -221,6 +305,32 @@ const Profile: React.FC = () => {
                 Salvar alterações
               </Button>
             </Form>
+
+            {modalVisible && (
+              <Modal
+                animationType="slide"
+                visible={modalVisible}
+                onRequestClose={() => {
+                  setModalVisible(!modalVisible);
+                }}
+              >
+                <ModalView>
+                  <ChooseActionAvatarButton onPress={handleTakePhotoFromCamera}>
+                    <Icon name="camera" size={24} color="#fb1528" />
+                    <ChooseActionAvatarButtonText>
+                      Tirar foto
+                    </ChooseActionAvatarButtonText>
+                  </ChooseActionAvatarButton>
+
+                  <ChooseActionAvatarButton onPress={handleChooseImageLibrary}>
+                    <Icon name="image" size={24} color="#fb1528" />
+                    <ChooseActionAvatarButtonText>
+                      Escolher da galeria
+                    </ChooseActionAvatarButtonText>
+                  </ChooseActionAvatarButton>
+                </ModalView>
+              </Modal>
+            )}
           </Container>
         </ScrollView>
       </KeyboardAvoidingView>

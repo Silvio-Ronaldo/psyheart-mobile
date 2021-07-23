@@ -27,3 +27,33 @@ export const Title = styled.Text`
   font-family: 'Poppins-Medium';
   margin: 24px 0;
 `;
+
+export const Modal = styled.Modal``;
+
+export const ModalView = styled.View`
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  padding: 24px;
+  background: #0c0d0f;
+`;
+
+export const ChooseActionAvatarButton = styled.TouchableOpacity`
+  margin: 24px;
+  background: #312e38;
+  width: 280px;
+  height: 65px;
+  padding: 0 12px;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+`;
+
+export const ChooseActionAvatarButtonText = styled.Text`
+  font-family: 'Poppins-Medium';
+  font-size: 16px;
+  color: #f4ede8;
+  margin-left: 16px;
+  text-align: center;
+`;
