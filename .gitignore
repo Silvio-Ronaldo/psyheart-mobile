@@ -62,3 +62,6 @@ buck-out/
 # config file (variables)
 config.js
 
+
+# Test files
+coverage/
