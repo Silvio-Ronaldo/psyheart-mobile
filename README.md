@@ -1,5 +1,5 @@
 <h1 align="center">
-  <img src="./assets/psyheart-logo.svg" alt="PsyHeart Logo" height=200 width=400 />
+  <img src="./github/psyheart-logo.svg" alt="PsyHeart Logo" height=200 width=400 />
 </h1>
 
 <p align="center">
@@ -10,7 +10,7 @@
   </strong></br>Practical project for study</br>Inspired by Rocketseat's GoBarber</br>
 
   <p align="center">
-    Access the repository of the API version of PsyHeart at: https://github.com/Silvio-Ronaldo/psyheart-api
+    Access the repository of the API version of PsyHeart at: https://github.com/Silvio-Ronaldo/psyheart-api</br>
     Access the repository for the Web version of PsyHeart at: https://github.com/Silvio-Ronaldo/psyheart-web</br>
   </p></br>
 </p>
