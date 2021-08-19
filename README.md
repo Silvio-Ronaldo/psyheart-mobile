@@ -4,7 +4,7 @@
 
 <p align="center">
   <strong>
-    🧠 PsyHeart mobile app for people who need help. ❤️</br>
+    🧠 PsyHeart Android/Iphone mobile app for people who need help. ❤️</br>
     PsyHeart is a platform that allows you to schedule an online session with a psychologist.</br>
     🧠 * Keep your mind aligned with your heart! * ❤️
   </strong></br>Practical project for study</br>Inspired by Rocketseat's GoBarber</br>
@@ -101,13 +101,13 @@
 <ul>
   <li><a href="https://reactnative.dev">React Native</a></li>
   <li><a href="https://www.typescriptlang.org">TypeScript</a></li>
-  <li><a href="https://styled-components.com">Styled Components</a></li>
+  <li><a href="https://styled-components.com">Styled Components</a></li></br>
  
-  <li><a href="https://react-native-async-storage.github.io/async-storage/docs/usage/">React Native Async Storage</a></li></br>
-  <li><a href="https://github.com/react-native-datetimepicker/datetimepicker">React Native Datetime Picker</a></li></br>
-  <li><a href="https://github.com/react-native-image-picker/react-native-image-picker">React Native Image Picker</a></li></br>
+  <li><a href="https://react-native-async-storage.github.io/async-storage/docs/usage/">React Native Async Storage</a></li>
+  <li><a href="https://github.com/react-native-datetimepicker/datetimepicker">React Native Datetime Picker</a></li>
+  <li><a href="https://github.com/react-native-image-picker/react-native-image-picker">React Native Image Picker</a></li>
   <li><a href="https://unform.dev">Unform</a></li>
-  <li><a href="https://github.com/jquense/yup">Yup</a></li>
+  <li><a href="https://github.com/jquense/yup">Yup</a></li></br>
   
   <li><a href="https://testing-library.com">Testing-library</a></li>
   <li><a href="https://jestjs.io/pt-BR/">Jest</a></li></br>
