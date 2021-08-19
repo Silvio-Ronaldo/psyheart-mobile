@@ -39,14 +39,14 @@
   📋 Table of contents
 </h2>
 <ul>
-  <li><a href="https://github.com/Silvio-Ronaldo/psyheart-web#-status">Status</a></li>
-  <li><a href="https://github.com/Silvio-Ronaldo/psyheart-web#-how-it-works">How it works</a></li>
-  <li><a href="https://github.com/Silvio-Ronaldo/psyheart-web#-its-paid">It's paid?</a></li>
-  <li><a href="https://github.com/Silvio-Ronaldo/psyheart-web#%EF%B8%8F-demonstration">Demonstration</a></li>
-  <li><a href="https://github.com/Silvio-Ronaldo/psyheart-web#-upcoming-features">Upcoming features</a></li>
-  <li><a href="https://github.com/Silvio-Ronaldo/psyheart-web#%EF%B8%8F-technologies">Technologies</a></li>
-  <li><a href="https://github.com/Silvio-Ronaldo/psyheart-web#-author">Author</a></li>
-  <li><a href="https://github.com/Silvio-Ronaldo/psyheart-web#%EF%B8%8F-license">License</a></li>
+  <li><a href="https://github.com/Silvio-Ronaldo/psyheart-mobile#-status">Status</a></li>
+  <li><a href="https://github.com/Silvio-Ronaldo/psyheart-mobile#-how-it-works">How it works</a></li>
+  <li><a href="https://github.com/Silvio-Ronaldo/psyheart-mobile#-its-paid">It's paid?</a></li>
+  <li><a href="https://github.com/Silvio-Ronaldo/psyheart-mobile#%EF%B8%8F-demonstration">Demonstration</a></li>
+  <li><a href="https://github.com/Silvio-Ronaldo/psyheart-mobile#-upcoming-features">Upcoming features</a></li>
+  <li><a href="https://github.com/Silvio-Ronaldo/psyheart-mobile#%EF%B8%8F-technologies">Technologies</a></li>
+  <li><a href="https://github.com/Silvio-Ronaldo/psyheart-mobile#-author">Author</a></li>
+  <li><a href="https://github.com/Silvio-Ronaldo/psyheart-mobile#%EF%B8%8F-license">License</a></li>
 </ul></br>
 
 
