@@ -24,7 +24,9 @@ import getValidationErrors from '../../utils/getValidationErrors';
 
 import {
   Container,
+  TopButtons,
   BackButton,
+  SignOutButton,
   UserAvatarButton,
   UserAvatar,
   Title,
@@ -45,7 +47,7 @@ interface ProfileFormData {
 const Profile: React.FC = () => {
   const [modalVisible, setModalVisible] = useState(false);
 
-  const { user, updateUser } = useAuth();
+  const { user, updateUser, signOut } = useAuth();
 
   const navigation = useNavigation();
   const formRef = useRef<FormHandles>(null);
@@ -223,9 +225,15 @@ const Profile: React.FC = () => {
       >
         <ScrollView keyboardShouldPersistTaps="handled">
           <Container>
-            <BackButton onPress={handleGoBack}>
-              <Icon name="chevron-left" size={24} color="#999591" />
-            </BackButton>
+            <TopButtons>
+              <BackButton onPress={handleGoBack}>
+                <Icon name="chevron-left" size={24} color="#999591" />
+              </BackButton>
+
+              <SignOutButton onPress={signOut}>
+                <Icon name="log-out" size={24} color="#999591" />
+              </SignOutButton>
+            </TopButtons>
 
             <UserAvatarButton onPress={handleOpenAvatarModal}>
               <UserAvatar source={{ uri: user.avatar_url }} />

@@ -6,7 +6,16 @@ export const Container = styled.SafeAreaView`
   padding: 0 30px 40px;
 `;
 
+export const TopButtons = styled.View`
+  flex-direction: row;
+  justify-content: space-between;
+`;
+
 export const BackButton = styled.TouchableOpacity`
+  margin-top: 40px;
+`;
+
+export const SignOutButton = styled.TouchableOpacity`
   margin-top: 40px;
 `;
 
