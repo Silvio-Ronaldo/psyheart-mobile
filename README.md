@@ -73,19 +73,14 @@
 
 
 <h2>🖥️ Demonstration</h2>
-<h3>PsyHeart SignUp</h3>
+<h3>New Appointment</h3>
   <p align="center">
-    <img src="./assets/psyheart-signup.gif" alt="PsyHeart SignUp" />
+    <img src="./github/psyheart-app-appointment.gif" alt="PsyHeart Appointment" height=400 />
   </p></br>
   
-<h3>PsyHeart Dashboard</h3>
+<h3>Profile</h3>
   <p align="center">
-    <img src="./assets/psyheart-signin.gif" alt="PsyHeart Dashboard" />
-  </p></br>
-  
-<h3>PsyHeart Profile</h3>
-  <p align="center">
-    <img src="./assets/psyheart-profile.gif" alt="PsyHeart Profile" />
+    <img src="./github/psyheart-app-profile.gif" alt="PsyHeart Profile" height=400 />
   </p></br>
   
 
