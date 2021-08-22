@@ -7,7 +7,7 @@
     🧠 PsyHeart Android/Iphone mobile app for people who need help. ❤️</br>
     PsyHeart is a platform that allows you to schedule an online session with a psychologist.</br>
     🧠 * Keep your mind aligned with your heart! * ❤️
-  </strong></br>Practical project for study</br>Inspired by Rocketseat's GoBarber</br>
+  </strong></br>Practical project for study.</br>Inspired by Rocketseat's GoBarber</br>
 
   <p align="center">
     Access the repository of the API version of PsyHeart at: https://github.com/Silvio-Ronaldo/psyheart-api</br>
